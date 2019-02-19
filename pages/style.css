@@ -1,4 +1,8 @@
 div{
     flex-direction: column;
-    font-weight: 300
+    font-weight: 300;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+    max-height: 400px;
 }
