@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import 'isomorphic-fetch';
+import Layout from '../components/Layout';
 
 class Podcast extends React.Component{
     
@@ -17,13 +18,7 @@ class Podcast extends React.Component{
         return(
             <div>
                 <div className="wrapper">
-                    <header>
-                        <Link href={`/channel?id=${podcast.channel.id}`}>
-                            <a className='close'>&lt; Volver</a>
-                        </Link>
-                        Podcasts
-                    </header>
-
+                <Layout podcast nav={{title:`${podcast.channel.title}`, href:`/channel?id=${podcast.channel.id}`}} title={podcast.title}>
                     <figure>
                         <img src={podcast.urls.image || podcast.channel.urls.logo_image.original} alt=""/>
                     </figure>
@@ -35,6 +30,14 @@ class Podcast extends React.Component{
                             <source src={ podcast.urls.high_mp3 } type='audio/mpeg' />
                         </audio>
                     </div>
+                </Layout>
+                    {/* <header>
+                        <Link href={`/channel?id=${podcast.channel.id}`}>
+                            <a className='close'>&lt; Volver</a>
+                        </Link>
+                        Podcasts
+                    </header> */}
+
 
                 </div>
 
