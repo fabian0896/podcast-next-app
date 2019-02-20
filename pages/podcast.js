@@ -31,14 +31,7 @@ class Podcast extends React.Component{
                         </audio>
                     </div>
                 </Layout>
-                    {/* <header>
-                        <Link href={`/channel?id=${podcast.channel.id}`}>
-                            <a className='close'>&lt; Volver</a>
-                        </Link>
-                        Podcasts
-                    </header> */}
-
-
+           
                 </div>
 
                 <style jsx>{`

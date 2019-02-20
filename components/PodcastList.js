@@ -4,12 +4,12 @@ import Link from 'next/link';
 class PodcastList extends React.Component{
     render(){
 
-        const { audioClips } = this.props;
+        const { podcasts } = this.props;
 
         return(
             <Fragment>
                 <h2>Ultimos Podcasts</h2>
-                { audioClips.map((clip) => (
+                { podcasts.map((clip) => (
                     <Link key={clip.id} href={`/podcast?id=${clip.id}`} prefetch key={clip.id}>
                     <a className='podcast'>
                         <h3>{ clip.title }</h3>
